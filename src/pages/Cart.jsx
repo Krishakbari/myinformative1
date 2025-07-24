@@ -7,7 +7,7 @@ import twentyone from "../assets/21.jpg";
 import { Navigate, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-    const navigate=useNavigate()
+  const navigate = useNavigate()
   // Sample cart items with your product images
   const [cartItems, setCartItems] = useState([
     {
@@ -47,7 +47,7 @@ const Cart = () => {
   // Update quantity
   const updateQuantity = (id, newQuantity) => {
     if (newQuantity < 1) return;
-    setCartItems(cartItems.map(item => 
+    setCartItems(cartItems.map(item =>
       item.id === id ? { ...item, quantity: newQuantity } : item
     ));
   };
@@ -73,7 +73,7 @@ const Cart = () => {
             <ShoppingBag className="w-24 h-24 text-gray-300 mx-auto mb-6" />
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Cart is Empty</h2>
             <p className="text-gray-600 mb-8">Looks like you haven't added anything to your cart yet.</p>
-            <button onClick={()=>navigate("/shop")} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center gap-2">
+            <button onClick={() => navigate("/shop")} className="bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center gap-2">
               <ArrowLeft className="w-4 h-4" />
               Continue Shopping
             </button>
@@ -88,7 +88,7 @@ const Cart = () => {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <button onClick={()=>navigate("/shop")} className="inline-flex items-center gap-2 text-red-500 hover:text-red-600 font-medium mb-4">
+          <button onClick={() => navigate("/shop")} className="inline-flex items-center gap-2 text-red-500 hover:text-red-600 font-medium mb-4">
             <ArrowLeft className="w-4 h-4" />
             Continue Shopping
           </button>
@@ -106,11 +106,12 @@ const Cart = () => {
 
               <div className="divide-y divide-gray-200">
                 {cartItems.map((item) => (
-                  <div key={item.id} className="p-6 flex items-center gap-6">
+                  <div key={item.id} className="p-4 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+
                     {/* Product Image */}
                     <div className="w-24 h-24 bg-gray-100 rounded-lg overflow-hidden flex-shrink-0">
-                      <img 
-                        src={item.image} 
+                      <img
+                        src={item.image}
                         alt={item.name}
                         className="w-full h-full object-cover"
                       />
@@ -128,25 +129,28 @@ const Cart = () => {
                     </div>
 
                     {/* Quantity Controls */}
-                    <div className="flex items-center gap-3">
-                      <div className="flex items-center border border-gray-300 rounded-lg">
+                    <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-4 mt-4 sm:mt-0 w-full sm:w-auto">
+
+                      <div className="flex items-center border border-gray-300 rounded-lg text-sm">
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="p-2 hover:bg-gray-100 transition-colors duration-200"
+                          className="p-1 sm:p-2 hover:bg-gray-100 transition-colors duration-200"
                           disabled={item.quantity <= 1}
                         >
-                          <Minus className="w-4 h-4 text-gray-600" />
+                          <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                         </button>
-                        <span className="px-4 py-2 font-semibold text-gray-900 min-w-[3rem] text-center">
+                        <span className="px-2 py-1 sm:px-3 font-semibold text-gray-900 min-w-[2rem] sm:min-w-[3rem] text-center text-xs sm:text-sm">
                           {item.quantity}
                         </span>
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="p-2 hover:bg-gray-100 transition-colors duration-200"
+                          className="p-1 sm:p-2 hover:bg-gray-100 transition-colors duration-200"
                         >
-                          <Plus className="w-4 h-4 text-gray-600" />
+                          <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                         </button>
                       </div>
+
+
 
                       {/* Item Total */}
                       <div className="text-right min-w-[5rem]">
@@ -210,7 +214,7 @@ const Cart = () => {
                 Proceed to Checkout
               </button>
 
-              <div onClick={()=>navigate("/shop")} className="text-center">
+              <div onClick={() => navigate("/shop")} className="text-center">
                 <button className="text-red-500 hover:text-red-600 font-medium">
                   Continue Shopping
                 </button>

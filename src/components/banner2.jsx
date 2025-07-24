@@ -74,7 +74,7 @@ const AppleWatchBanner = () => {
           
           {/* Right content */}
           <div className="text-white text-left md:text-right w-full md:w-auto md:max-w-xs">
-            <div className="text-xs sm:text-sm font-medium mb-1 sm:mb-2">Smart Solo</div>
+            <div className="text-xs sm:text-sm font-medium mb-1 sm:mb-2 ">Smart Solo</div>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-4">Winter Sale</h2>
             <p className="text-xs sm:text-sm opacity-80 mb-3 sm:mb-6">
               Lorem ipsum, dolor sit amet consectetur adipiscing elit.
@@ -94,11 +94,11 @@ const AppleWatchBanner = () => {
       </div>
 
       {/* Apple Watch breaking out of the banner - Always visible and centered */}
-      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+      <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <img 
           src={twentysix}
           alt="Apple Watch" 
-          className="h-[200px] sm:h-[250px] md:h-[320px] lg:h-[450px] w-auto object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-300"
+          className="h-[200px] sm:h-[250px] md:h-[320px] lg:h-[450px] w-auto object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-300 sm:opacity-100 opacity-60 sm:z-10 z-0"
         />
       </div>
     </div>

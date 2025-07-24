@@ -14,7 +14,8 @@ const ProductCards = () => {
     const buttonHover = "transition-all duration-300 group-hover:scale-105 group-hover:brightness-110";
 
     return (
-        <div className="grid grid-cols-4 gap-6 p-4 max-w-[1520px] mx-[30px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4 max-w-[1520px] mx-auto">
+
             {/* Card 1 - Earphone */}
             <div className={`${cardClasses} bg-gradient-to-br from-gray-800 to-gray-700 col-span-1`}>
                 <p className="absolute bottom-16 left-6 text-5xl font-extrabold opacity-30 z-0">Earphone</p>
@@ -25,12 +26,16 @@ const ProductCards = () => {
                         Browse
                     </button>
                 </div>
-                <img src={twelve} alt="Earphone" className={`${imageHover} w-72 h-auto z-10`} />
+                <img
+                    src={twelve}
+                    alt="Earphone"
+                    className="absolute opacity-50 sm:opacity-100 bottom-0 right-4 w-72 h-auto z-0 sm:z-10 transition-transform duration-500 group-hover:-translate-y-2"
+                />
             </div>
 
             {/* Card 2 - Gadget */}
             <div className={`${cardClasses} bg-gradient-to-br from-yellow-400 to-yellow-300`}>
-                <p className="absolute bottom-16 left-6 text-5xl font-extrabold opacity-30 z-0">Gadget</p>
+                <p className="absolute bottom-16 left-6 text-5xl font-extrabold opacity-50 z-20 sm:z-0">Gadget</p>
                 <div className="relative z-10">
                     <p className="text-base">Enjoy</p>
                     <p className="text-2xl font-semibold">With</p>
@@ -38,12 +43,12 @@ const ProductCards = () => {
                         Browse
                     </button>
                 </div>
-                <img src={thirteen} alt="Gadget" className="absolute bottom-0 right-[-60px] w-72 h-auto z-10 transition-transform duration-500 group-hover:-translate-y-2" />
+                <img src={thirteen} alt="Gadget" className="absolute opacity-50 sm:opacity-100 bottom-0 right-[-60px] w-72 h-auto z-0 sm:z-10 transition-transform duration-500 group-hover:-translate-y-2" />
             </div>
 
             {/* Card 3 - Laptop */}
-            <div className={`${cardClasses} bg-gradient-to-br from-red-500 to-red-400 col-span-2`}>
-                <p className="absolute bottom-16 left-6 text-6xl font-extrabold opacity-30 z-0">Laptop</p>
+            <div className={`${cardClasses} bg-gradient-to-br from-red-500 to-red-400 col-span-1 sm:col-span-1 lg:col-span-2`}>
+                <p className="absolute bottom-16 left-6 text-6xl font-extrabold opacity-50 z-20 sm:z-0">Laptop</p>
                 <div className="relative z-10">
                     <p className="text-base">Enjoy</p>
                     <p className="text-2xl font-semibold">With</p>
@@ -51,12 +56,13 @@ const ProductCards = () => {
                         Browse
                     </button>
                 </div>
-                <img src={fourteen} alt="Laptop" className="absolute bottom-0 right-8 w-60 h-auto z-10 transition-transform duration-500 group-hover:-translate-y-2" />
+                <img src={fourteen} alt="Laptop" className="absolute opacity-50 sm:opacity-100 bottom-0 right-8 w-60 h-auto z-0 sm:z-10 transition-transform duration-500 group-hover:-translate-y-2" />
             </div>
 
             {/* Card 4 - Laptop */}
-            <div className={`${cardClasses} bg-gradient-to-br from-[#b6bbc4] to-[#e2e5ea] col-span-2 text-black`}>
-                <p className="absolute bottom-16 left-6 text-6xl font-extrabold opacity-30 z-0">Laptop</p>
+            <div className={`${cardClasses} bg-gradient-to-br from-[#b6bbc4] to-[#e2e5ea] text-black col-span-1 sm:col-span-1 lg:col-span-2`}>
+
+                <p className="absolute bottom-16 left-6 text-6xl font-extrabold opacity-50 z-20 sm:z-0">Laptop</p>
                 <div className="relative z-10">
                     <p className="text-base">Enjoy</p>
                     <p className="text-2xl font-semibold">With</p>
@@ -64,12 +70,12 @@ const ProductCards = () => {
                         Browse
                     </button>
                 </div>
-                <img src={fifteen} alt="Laptop" className="absolute bottom-0 right-8 w-60 h-auto z-10 transition-transform duration-500 group-hover:-translate-y-2" />
+                <img src={fifteen} alt="Laptop" className="absolute opacity-50 sm:opacity-100 bottom-0 right-8 w-60 h-auto z-0 sm:z-10 transition-transform duration-500 group-hover:-translate-y-2" />
             </div>
 
             {/* Card 5 - Earphone */}
             <div className={`${cardClasses} bg-gradient-to-br from-[#36d399] to-[#2bb673]`}>
-                <p className="absolute bottom-16 left-6 text-5xl font-extrabold opacity-30 z-0">Earphone</p>
+                <p className="absolute bottom-16 left-6 text-5xl font-extrabold opacity-50 z-20 sm:z-0">Earphone</p>
                 <div className="relative z-10">
                     <p className="text-base">Enjoy</p>
                     <p className="text-2xl font-semibold">With</p>
@@ -77,12 +83,12 @@ const ProductCards = () => {
                         Browse
                     </button>
                 </div>
-                <img src={sixteen} alt="Earphone" className="absolute bottom-0 right-4 w-48 h-auto z-10 transition-transform duration-500 group-hover:-translate-y-2" />
+                <img src={sixteen} alt="Earphone" className="absolute opacity-50 sm:opacity-100 bottom-0 right-4 w-48 h-auto z-0 sm:z-10 transition-transform duration-500 group-hover:-translate-y-2" />
             </div>
 
             {/* Card 6 - Gadget */}
             <div className={`${cardClasses} bg-gradient-to-br from-[#007aff] to-[#2a7ff5]`}>
-                <p className="absolute bottom-16 left-6 text-5xl font-extrabold opacity-30 z-0">Gadget</p>
+                <p className="absolute bottom-16 left-6 text-5xl font-extrabold opacity-50 z-20 sm:z-0">Gadget</p>
                 <div className="relative z-10">
                     <p className="text-base">Enjoy</p>
                     <p className="text-2xl font-semibold">With</p>
@@ -90,7 +96,7 @@ const ProductCards = () => {
                         Browse
                     </button>
                 </div>
-                <img src={seventeen} alt="Gadget" className="absolute bottom-0 right-[48px] w-48 h-auto z-10 transition-transform duration-500 group-hover:-translate-y-2" />
+                <img src={seventeen} alt="Gadget" className="absolute opacity-50 sm:opacity-100 bottom-0 right-[48px] w-48 h-auto z-0 sm:z-10  transition-transform duration-500 group-hover:-translate-y-2" />
             </div>
         </div>
     );
